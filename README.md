@@ -3,7 +3,7 @@ Plan aplikacji obsługi ticketów
 Ogólna struktura programu: 
   Aplikacja będzie oparta na konsoli i będzie obsługiwać operacje na "ticketach".  Tickety to obiekty opisane przez pewne atrybuty, takie jak ID, tytuł, opis, data  utworzenia, status itp. Wszystkie dane będą przechowywane w plikach  binarnych. 
 Klasy: 
-• Ticket (klasa reprezentująca pojedynczy ticket): 
+• Ticket (klasa reprezentująca pojedynczy ticket):
   o Pola: 
     ▪ ID (numer identyfikacyjny) 
     ▪ Tytuł 
