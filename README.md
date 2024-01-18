@@ -1,60 +1,46 @@
-# TicketMenager_WSTI
-Plan aplikacji obsługi ticketów 
-Ogólna struktura programu: 
-  Aplikacja będzie oparta na konsoli i będzie obsługiwać operacje na "ticketach".  Tickety to obiekty opisane przez pewne atrybuty, takie jak ID, tytuł, opis, data  utworzenia, status itp. Wszystkie dane będą przechowywane w plikach  binarnych. 
-Klasy: 
-• Ticket (klasa reprezentująca pojedynczy ticket):
-  o Pola: 
-    ▪ ID (numer identyfikacyjny) 
-    ▪ Tytuł 
-    ▪ Opis 
-    ▪ Data utworzenia 
-    ▪ Status 
-    ▪ Priorytet 
-  o Metody: 
-    ▪ Konstruktor 
-    ▪ Gettery i settery dla pól 
-• TicketManager (klasa zarządzająca ticketami): 
-  o Pola: 
-    ▪ Wektor obiektów Ticket przechowujący tickety 
-  o Metody: 
-    ▪ Dodawanie nowego ticketu 
-    ▪ Otwieranie pliku z istniejącymi ticketami 
-    ▪ Zapisywanie ticketów do pliku 
-    ▪ Przeglądanie ticketów (do przodu i do tyłu) 
-    ▪ Dopisywanie pojedynczego ticketu z walidacją 
-    ▪ Aktualizacja pojedynczego ticketu 
-    ▪ Usuwanie pojedynczego ticketu z potwierdzeniem 
-    ▪ Wyszukiwanie ticketów według kryteriów 
-    ▪ Sortowanie ticketów 
-• FileHandler (klasa do obsługi plików): 
-  o Metody: 
-    ▪ Tworzenie nowego pliku 
-    ▪ Otwieranie istniejącego pliku 
-    ▪ Zapisywanie danych do pliku 
-    ▪ Eksport pliku do innych formatów 
-• UserManager (klasa zarządzająca użytkownikami i ich uprawnieniami):
-  o Metody: 
-    ▪ Zarządzanie użytkownikami 
-    ▪ Przypisywanie uprawnień
-Operacje użytkownika: 
-1. Dodawanie nowego ticketu 
-2. Otwieranie pliku z istniejącymi ticketami 
-3. Zapisywanie zmian w pliku 
-4. Przeglądanie ticketów (do przodu i do tyłu) 
-5. Dopisywanie pojedynczego ticketu 
-6. Aktualizacja pojedynczego ticketu 
-7. Usuwanie pojedynczego ticketu 
-8. Wyszukiwanie ticketów według kryteriów 
-9. Sortowanie ticketów 
-10. Eksport pliku do innych formatów 
-Dodatkowe funkcje: 
-1. Praca z wieloma plikami (wybór, archiwizacja, zapisz jako) 
-2. Zaznaczanie / wyłączanie elementów do usunięcia, archiwizacji 3. Usuwanie grupowe na podstawie zaznaczenia lub kryteriów 
-4. Zaawansowane kryteria wyszukiwawcze (z operatorami logicznymi, dokładne /  przybliżone) 
-5. Wyszukaj i zamień 
-6. Nakładanie / wyłączanie filtrów 
-7. Zaawansowana walidacja i zabezpieczenia 
-8. Hasło dostępu do operacji modyfikujących 
-9. Użytkownicy z uprawnieniami
+# Task Manager
 
+Task Manager to aplikacja konsolowa stworzona przez Adama Szczotka, mająca na celu zarządzanie ticketami (zadaniami). 
+Projekt został zrealizowany na zaliczenie pierwszego semestru przedmiotu programowanie na Wyższej Szkole Technologii Informatycznych w Katowicach.
+
+## Wprowadzenie
+
+Task Manager to prosta, ale funkcjonalna aplikacja konsolowa umożliwiająca zarządzanie ticketami. 
+Użytkownik może dodawać, aktualizować, usuwać oraz wyszukiwać tickety według określonych kryteriów. 
+Aplikacja również umożliwia eksportowanie ticketów do plików tekstowych.
+
+## Funkcje
+
+Aplikacja oferuje następujące funkcje:
+- Dodawanie, aktualizowanie, usuwanie i wyświetlanie ticketów.
+- Eksportowanie ticketów do plików tekstowych.
+- Wyszukiwanie ticketów według priorytetu lub statusu.
+
+## Technologie
+
+Projekt został wykonany w języku C++ z wykorzystaniem standardowej biblioteki C++.
+
+## Uruchomienie
+
+Aby uruchomić aplikację, wykonaj następujące kroki:
+1. Sklonuj repozytorium na swoje urządzenie.
+2. Otwórz wiersz poleceń lub terminal w folderze projektu.
+3. Skompiluj projekt (makefile) za pomocą kompilatora C++ (np. `g++`).
+4. Uruchom skompilowany program.
+
+## Struktura Projektu
+
+Projekt składa się z następujących głównych folderów:
+- `src/`: Folder zawierający pliki źródłowe projektu.
+- `include/`: Folder z plikami nagłówkowymi.
+- `data/`: Folder na pliki danych, np. tickety.
+- `bin/`: Folder na skompilowaną juz aplikację.
+
+
+## Autor
+
+Adam Szczotka - student Wyższej Szkoły Technologii Informatycznych w Katowicach.
+
+## Podziękowania
+
+Podziękowania dla wykładowców i kolegów z Wyższej Szkoły Technologii Informatycznych w Katowicach za wsparcie i pomoc w realizacji projektu.
