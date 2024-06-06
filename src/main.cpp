@@ -4,6 +4,25 @@
 #include "../include/UserManager.h"
 #include <windows.h>
 
+void displayLoginMenu() {
+    std::cout << "1. Register\n";
+    std::cout << "2. Login\n";
+    std::cout << "3. Exit\n";
+    std::cout << "Enter your choice: ";
+}
+
+void displayMainMenu() {
+    std::cout << "Menu:\n";
+    std::cout << "1. Dodaj Ticket\n";
+    std::cout << "2. Pokaż Tickety\n";
+    std::cout << "3. Aktualizuj Ticket\n";
+    std::cout << "4. Usuń Ticket\n";
+    std::cout << "5. Eksportuj Tickety do TXT\n";
+    std::cout << "6. Wyszukaj Tickety\n";
+    std::cout << "7. Zapisz i wyjdź\n";
+    std::cout << "Wybierz opcję: ";
+}
+
 int main() {
     SetConsoleOutputCP(CP_UTF8); // Ustawienie strony kodowej konsoli na UTF-8
     TicketManager ticketManager;
@@ -16,18 +35,48 @@ int main() {
 
     int choice;
     bool running = true;
+    bool loggedIn = false;
     bool validPriority;
 
+    // Login/Registration Loop
+    while (!loggedIn) {
+        displayLoginMenu();
+        std::cin >> choice;
+
+        switch (choice) {
+            case 1: {
+                std::string username, password;
+                std::cout << "Enter username: ";
+                std::cin >> username;
+                std::cout << "Enter password: ";
+                std::cin >> password;
+                userManager.registerUser(username, password);
+                break;
+            }
+            case 2: {
+                std::string username, password;
+                std::cout << "Enter username: ";
+                std::cin >> username;
+                std::cout << "Enter password: ";
+                std::cin >> password;
+                if (userManager.loginUser(username, password)) {
+                    std::cout << "Login successful. Access granted.\n";
+                    loggedIn = true;
+                } else {
+                    std::cout << "Login failed. Access denied.\n";
+                }
+                break;
+            }
+            case 3:
+                return 0;
+            default:
+                std::cout << "Invalid choice. Please try again.\n";
+        }
+    }
+
+    // Main Menu Loop
     while (running) {
-        std::cout << "Menu:\n";
-        std::cout << "1. Dodaj Ticket\n";
-        std::cout << "2. Pokaż Tickety\n";
-        std::cout << "3. Aktualizuj Ticket\n";
-        std::cout << "4. Usuń Ticket\n";
-        std::cout << "5. Eksportuj Tickety do TXT\n";
-        std::cout << "6. Wyszukaj Tickety\n";
-        std::cout << "7. Zapisz i wyjdź\n";
-        std::cout << "Wybierz opcję: ";
+        displayMainMenu();
         std::cin >> choice;
 
         switch (choice) {
@@ -48,7 +97,6 @@ int main() {
                 std::getline(std::cin, status);
 
                 int priority;
-                bool validPriority;
 
                 do {
                     std::cout << "Wprowadź priorytet ticketu (1 - najważniejszy, 2 - średnio, 3 - najmniej ważny): ";
@@ -99,7 +147,6 @@ int main() {
                         std::cout << "Niepoprawny priorytet. Wybierz 1, 2 lub 3." << std::endl;
                     }
                 } while (!validPriority);
-
 
                 ticketManager.updateTicket(id, title, description, status, priority);
                 break;
