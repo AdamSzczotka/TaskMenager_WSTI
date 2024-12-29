@@ -1,6 +1,6 @@
-# Task Manager
+# Menedżer Zadań
 
-Task Manager is a desktop application that helps managers of organizations to assign different tasks to their employees, organize them into teams and projects, and track their deadlines.
+Menedżer Zadań to aplikacja desktopowa, która pomaga menedżerom organizacji przydzielać różne zadania swoim pracownikom, organizować je w zespoły i projekty oraz śledzić terminy ich realizacji
 
 ![Screenshot (165)](https://github.com/)
 
@@ -8,20 +8,16 @@ Task Manager is a desktop application that helps managers of organizations to as
 
 ![Screenshot (167)](https://github.com/)
 
-## Features
+## Funkcje
 
-- Create and manage multiple teams and projects
-- Assign tasks to team members and set due dates
-- Create a server
+- Tworzenie i zarządzanie wieloma zespołami i projektami
+- Przydzielanie zadań członkom zespołu oraz ustawianie terminów realizacji
+- Tworzenie serwera
 
-## Installation
+## Instalacja
 
-Task Manager is built on the Qt platform and requires Qt 5.15 or higher to run. You can download the installer for your operating system from the releases page. Alternatively, you can clone this repository and build the source code using Qt Creator.
+Menedżer Zadań jest oparty na platformie Qt i wymaga Qt w wersji 5.15 lub nowszej do działania. Możesz pobrać instalator dla swojego systemu operacyjnego ze strony wydań. Alternatywnie, możesz sklonować to repozytorium i zbudować kod źródłowy za pomocą Qt Creator.
 
-## Usage
+## Użytkowanie
 
-To start using Task Manager, you need to create an account and log in. You can then create your first organization , team or project, and invite other users to join. To create a task, click on the "Create Task" button and fill in the details. You can assign the task to yourself or another team member, and set a due date. You can also add comments to the task.
-
-## UML graphs of the application:
-
-To get more information, see https://github.com/imanzk/Task-Manager/blob/master/UML-graphs.pdf (Attached file).
+Aby rozpocząć korzystanie z Menedżera Zadań, musisz utworzyć konto i się zalogować. Następnie możesz utworzyć swoją pierwszą organizację, zespół lub projekt oraz zaprosić innych użytkowników do dołączenia. Aby utworzyć zadanie, kliknij przycisk „Utwórz zadanie” i wypełnij szczegóły. Możesz przypisać zadanie sobie lub innemu członkowi zespołu oraz ustawić termin realizacji. Możesz również dodawać komentarze do zadania.
