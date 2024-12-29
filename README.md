@@ -2,7 +2,7 @@
 
 Menedżer Zadań to aplikacja desktopowa, która pomaga menedżerom organizacji przydzielać różne zadania swoim pracownikom, organizować je w zespoły i projekty oraz śledzić terminy ich realizacji
 
-![Screenshot (165)](https://github.com/)
+![Screenshot (165)](https://github.com/AdamSzczotka/TaskMenager_WSTI/SCREENSHOT/Welcome.png)
 
 ![Screenshot (166)](https://github.com/)
 
